@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/naming/naming",
+    "pages/duplicate/duplicate",
+    "pages/hanzi/hanzi",
     "pages/index/index"
   ],
   "window": {
@@ -20,5 +23,31 @@
   },
   "componentFramework": "glass-easel",
   "sitemapLocation": "sitemap.json",
-  "lazyCodeLoading": "requiredComponents"
+  "lazyCodeLoading": "requiredComponents",
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#2d8cf0",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/naming/naming",
+        "text": "智能起名",
+        "iconPath": "assets/icon_naming.jpg",
+        "selectedIconPath": "assets/icon_naming_selected.jpg"
+      },
+      {
+        "pagePath": "pages/duplicate/duplicate",
+        "text": "重名查询",
+        "iconPath": "assets/icon_duplicate.jpg",
+        "selectedIconPath": "assets/icon_duplicate_selected.jpg"
+      },
+      {
+        "pagePath": "pages/hanzi/hanzi",
+        "text": "汉字解析",
+        "iconPath": "assets/icon_hanzi.jpg",
+        "selectedIconPath": "assets/icon_hanzi_selected.jpg"
+      }
+    ]
+  }
 }

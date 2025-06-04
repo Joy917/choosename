@@ -1,0 +1,25 @@
+<navigation-bar title="智能起名" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <view class="mode-select">
+    <picker mode="selector" range="{{modes}}" bindchange="onModeChange">
+      <view>模式：{{modes[modeIndex]}}</view>
+    </picker>
+    <picker mode="selector" range="{{genders}}" bindchange="onGenderChange">
+      <view>性别：{{genders[genderIndex]}}</view>
+    </picker>
+    <picker mode="selector" range="{{wordCounts}}" bindchange="onWordCountChange">
+      <view>字数：{{wordCounts[wordCountIndex]}}</view>
+    </picker>
+  </view>
+  <button bindtap="onGenerate">生成名字</button>
+  <view class="result-list">
+    <block wx:for="{{results}}" wx:key="index">
+      <view class="result-item">
+        <text class="name">{{item.name}}</text>
+        <text class="reason">{{item.reason}}</text>
+        <button size="mini" bindtap="onCollect" data-index="{{index}}">收藏</button>
+        <button size="mini" open-type="share">分享</button>
+      </view>
+    </block>
+  </view>
+</view> 

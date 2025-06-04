@@ -1,0 +1,11 @@
+<navigation-bar title="重名查询" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <input class="name-input" placeholder="请输入姓名" bindinput="onInput" />
+  <button bindtap="onQuery">查询</button>
+  <view wx:if="{{result}}" class="result-area">
+    <view>全国重名人数：{{result.total}}</view>
+    <view>男性：{{result.male}}，女性：{{result.female}}</view>
+    <ec-canvas id="regionPie" canvas-id="regionPie" style="width:100%;height:300rpx;"></ec-canvas>
+    <ec-canvas id="ageBar" canvas-id="ageBar" style="width:100%;height:300rpx;"></ec-canvas>
+  </view>
+</view> 

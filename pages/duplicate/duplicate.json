@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "navigation-bar": "/components/navigation-bar/navigation-bar",
+    "ec-canvas": "plugin://echarts/ec-canvas"
+  }
+} 

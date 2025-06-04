@@ -1,0 +1,12 @@
+<navigation-bar title="汉字解析" back="{{false}}" color="black" background="#FFF"></navigation-bar>
+<view class="container">
+  <input class="hanzi-input" placeholder="请输入汉字" maxlength="1" bindinput="onInput" />
+  <button bindtap="onQuery">查询</button>
+  <view wx:if="{{result}}" class="result-area">
+    <view>汉字：{{result.hanzi}}</view>
+    <view>拼音：{{result.pinyin}}</view>
+    <view>部首：{{result.bushou}}</view>
+    <view>五行：{{result.wuxing}}</view>
+    <view>释义：{{result.meaning}}</view>
+  </view>
+</view> 

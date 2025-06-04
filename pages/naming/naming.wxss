@@ -1,0 +1,43 @@
+.container {
+  padding: 24rpx;
+}
+.mode-select {
+  display: flex;
+  flex-direction: column;
+  gap: 16rpx;
+  margin-bottom: 32rpx;
+}
+.mode-select picker {
+  width: 100%;
+}
+.mode-select view {
+  padding: 12rpx 0 12rpx 8rpx;
+  font-size: 30rpx;
+  color: #333;
+  background: #f7f8fa;
+  border-radius: 8rpx;
+}
+button {
+  width: 80%;
+  margin: 0 auto 24rpx auto;
+  display: block;
+}
+.result-list {
+  margin-top: 24rpx;
+}
+.result-item {
+  margin-bottom: 16rpx;
+  padding: 16rpx;
+  border: 1px solid #eee;
+  border-radius: 8rpx;
+}
+.name {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin-right: 16rpx;
+}
+.reason {
+  color: #888;
+  font-size: 24rpx;
+  margin-left: 8rpx;
+} 
