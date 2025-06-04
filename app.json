@@ -3,7 +3,8 @@
     "pages/naming/naming",
     "pages/duplicate/duplicate",
     "pages/hanzi/hanzi",
-    "pages/index/index"
+    "pages/index/index",
+    "pages/naming/result"
   ],
   "window": {
     "navigationBarTextStyle": "black",

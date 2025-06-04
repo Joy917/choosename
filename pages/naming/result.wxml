@@ -1,0 +1,16 @@
+<navigation-bar title="推荐名字" back="{{true}}" color="#4F8CFF" background="#F7FAFF"></navigation-bar>
+<view class="bg-main">
+  <view class="card result-card">
+    <view class="result-title">为你推荐的名字</view>
+    <view class="result-list">
+      <block wx:for="{{results}}" wx:key="index">
+        <view class="result-item">
+          <text class="name">{{item.name}}</text>
+          <text class="reason">{{item.reason}}</text>
+          <button size="mini" bindtap="onCollect" data-index="{{index}}">收藏</button>
+          <button size="mini" open-type="share">分享</button>
+        </view>
+      </block>
+    </view>
+  </view>
+</view> 

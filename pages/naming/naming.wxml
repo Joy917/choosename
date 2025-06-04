@@ -1,25 +1,49 @@
-<navigation-bar title="智能起名" back="{{false}}" color="black" background="#FFF"></navigation-bar>
-<view class="container">
-  <view class="mode-select">
-    <picker mode="selector" range="{{modes}}" bindchange="onModeChange">
-      <view>模式：{{modes[modeIndex]}}</view>
-    </picker>
-    <picker mode="selector" range="{{genders}}" bindchange="onGenderChange">
-      <view>性别：{{genders[genderIndex]}}</view>
-    </picker>
-    <picker mode="selector" range="{{wordCounts}}" bindchange="onWordCountChange">
-      <view>字数：{{wordCounts[wordCountIndex]}}</view>
-    </picker>
+<navigation-bar title="智能起名" back="{{false}}" color="#4F8CFF" background="#F7FAFF"></navigation-bar>
+<view class="bg-main">
+  <view class="title-bar">
+    <text class="main-title">宝宝起名助手</text>
+    <text class="main-desc">为您的宝宝取一个寓意美好、朗朗上口的名字，结合传统文化与现代审美，助宝宝开启美好人生。</text>
   </view>
-  <button bindtap="onGenerate">生成名字</button>
-  <view class="result-list">
-    <block wx:for="{{results}}" wx:key="index">
-      <view class="result-item">
-        <text class="name">{{item.name}}</text>
-        <text class="reason">{{item.reason}}</text>
-        <button size="mini" bindtap="onCollect" data-index="{{index}}">收藏</button>
-        <button size="mini" open-type="share">分享</button>
+  <view class="card method-card">
+    <view class="method-row">
+      <radio class="mode-radio" value="bazi" checked="{{mode==='bazi'}}" bindtap="onModeSelect" data-mode="bazi"/>
+      <image src="/assets/calendar_icon.svg" class="big-icon"/>
+      <view class="method-info">
+        <text class="method-title">生辰八字起名</text>
+        <text class="method-desc">根据出生时间分析五行八字，补益命理</text>
       </view>
-    </block>
+    </view>
+    <view class="method-row">
+      <radio class="mode-radio" value="poem" checked="{{mode==='poem'}}" bindtap="onModeSelect" data-mode="poem"/>
+      <image src="/assets/poem_icon.svg" class="big-icon"/>
+      <view class="method-info">
+        <text class="method-title">古诗词起名</text>
+        <text class="method-desc">从经典诗词中提取优美名字，富有文化底蕴</text>
+      </view>
+    </view>
+  </view>
+  <view class="card form-card">
+    <view class="form-row">
+      <text class="form-label">宝宝性别</text>
+      <button class="form-btn {{gender=='男'?'active':''}}" data-gender="男" bindtap="onGenderSelect">男</button>
+      <button class="form-btn {{gender=='女'?'active':''}}" data-gender="女" bindtap="onGenderSelect">女</button>
+    </view>
+    <view class="form-row">
+      <text class="form-label">出生信息</text>
+      <picker mode="date" value="{{date}}" bindchange="onDateChange">
+        <view class="form-input short">{{date||'请选择日期'}}</view>
+      </picker>
+      <picker mode="time" value="{{time}}" bindchange="onTimeChange">
+        <view class="form-input short">{{time||'请选择时间'}}</view>
+      </picker>
+    </view>
+    <view class="form-row">
+      <text class="form-label">名字长度</text>
+      <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
+      <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
+    </view>
+    <button class="main-btn" bindtap="onGenerate">
+      <text class="btn-icon">✏️</text>生成名字
+    </button>
   </view>
 </view> 
