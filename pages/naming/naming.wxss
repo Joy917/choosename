@@ -16,7 +16,7 @@
 }
 .main-desc {
   font-size: 26rpx;
-  color: #4F8CFF;
+  color:rgb(47, 53, 80);
   margin-bottom: 32rpx;
   display: block;
 }
@@ -116,7 +116,7 @@
   color: #fff;
   font-size: 32rpx;
   border-radius: 32rpx;
-  margin: 32rpx auto 0 auto;
+  margin: 64rpx auto 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,3 +164,22 @@
   transform: scale(1.3);
   accent-color: #4F8CFF;
 } 
+
+.button-group {
+  display: flex;
+  flex-direction: row; /* 横向排列，默认其实就是row，可省略 */
+  gap:10rpx; /* 按钮间距，可根据实际调整，比如8rpx、12rpx、20rpx等 */
+}
+
+.form-btn {
+  flex: 1;         /* 自动平分父容器宽度 */
+  min-width: 0;    /* 防止内容撑开 */
+  max-width: 200rpx;
+}
+
+.action-icon {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 8rpx;
+  vertical-align: middle;
+}

@@ -7,7 +7,7 @@
   <view class="card method-card">
     <view class="method-row">
       <radio class="mode-radio" value="bazi" checked="{{mode==='bazi'}}" bindtap="onModeSelect" data-mode="bazi"/>
-      <image src="/assets/calendar_icon.svg" class="big-icon"/>
+      <image src="/assets/icon_calendar.png" class="big-icon"/>
       <view class="method-info">
         <text class="method-title">生辰八字起名</text>
         <text class="method-desc">根据出生时间分析五行八字，补益命理</text>
@@ -15,7 +15,7 @@
     </view>
     <view class="method-row">
       <radio class="mode-radio" value="poem" checked="{{mode==='poem'}}" bindtap="onModeSelect" data-mode="poem"/>
-      <image src="/assets/poem_icon.svg" class="big-icon"/>
+      <image src="/assets/icon_poem.png" class="big-icon"/>
       <view class="method-info">
         <text class="method-title">古诗词起名</text>
         <text class="method-desc">从经典诗词中提取优美名字，富有文化底蕴</text>
@@ -25,8 +25,10 @@
   <view class="card form-card">
     <view class="form-row">
       <text class="form-label">宝宝性别</text>
-      <button class="form-btn {{gender=='男'?'active':''}}" data-gender="男" bindtap="onGenderSelect">男</button>
-      <button class="form-btn {{gender=='女'?'active':''}}" data-gender="女" bindtap="onGenderSelect">女</button>
+      <view class="button-group">
+        <button class="form-btn {{gender=='男'?'active':''}}" data-gender="男" bindtap="onGenderSelect">男</button>
+        <button class="form-btn {{gender=='女'?'active':''}}" data-gender="女" bindtap="onGenderSelect">女</button>
+      </view>
     </view>
     <view class="form-row">
       <text class="form-label">出生信息</text>
@@ -39,8 +41,10 @@
     </view>
     <view class="form-row">
       <text class="form-label">名字长度</text>
-      <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
-      <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
+      <view class="button-group">
+        <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
+        <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
+      </view>
     </view>
     <button class="main-btn" bindtap="onGenerate">
       <text class="btn-icon">✏️</text>生成名字

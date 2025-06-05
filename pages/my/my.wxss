@@ -1,4 +1,11 @@
-@import './naming.wxss'; 
+@import "../naming/naming.wxss";
+
+.empty {
+  text-align: center;
+  color: #aaa;
+  font-size: 28rpx;
+  margin: 48rpx 0;
+}
 
 .result-item {
   display: flex;
@@ -18,4 +25,4 @@
   align-items: flex-end;
   gap: 12rpx;
   margin-left: 24rpx;
-}
+} 
