@@ -1,5 +1,7 @@
 .bg-main {
   min-height: 100vh;
+  height: 100vh;
+  overflow: auto;
   background: #F7FAFF;
   padding-bottom: 40rpx;
 }

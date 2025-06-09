@@ -1,5 +1,5 @@
 <navigation-bar title="智能起名" back="{{false}}" color="#4F8CFF" background="#F7FAFF"></navigation-bar>
-<view class="bg-main">
+<scroll-view class="bg-main" scroll-y="true" style="height: 100vh;">
   <view class="title-bar">
     <text class="main-title">宝宝起名助手</text>
     <text class="main-desc">为您的宝宝取一个寓意美好、朗朗上口的名字，结合传统文化与现代审美，助宝宝开启美好人生。</text>
@@ -21,6 +21,14 @@
         <text class="method-desc">从经典诗词中提取优美名字，富有文化底蕴</text>
       </view>
     </view>
+    <view class="method-row">
+      <radio class="mode-radio" value="generation" checked="{{mode==='generation'}}" bindtap="onModeSelect" data-mode="generation"/>
+      <image src="/assets/icon_generation.png" class="big-icon"/>
+      <view class="method-info">
+        <text class="method-title">按辈分起名</text>
+        <text class="method-desc">可固定第一个字，适合家族辈分传承</text>
+      </view>
+    </view>
   </view>
   <view class="card form-card">
     <view class="form-row">
@@ -31,6 +39,13 @@
       </view>
     </view>
     <view class="form-row">
+      <text class="form-label">名字长度</text>
+      <view class="button-group">
+        <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
+        <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
+      </view>
+    </view>
+    <view class="form-row" wx:if="{{mode==='bazi'}}">
       <text class="form-label">出生信息</text>
       <picker mode="date" value="{{date}}" bindchange="onDateChange">
         <view class="form-input short">{{date||'请选择日期'}}</view>
@@ -39,15 +54,12 @@
         <view class="form-input short">{{time||'请选择时间'}}</view>
       </picker>
     </view>
-    <view class="form-row">
-      <text class="form-label">名字长度</text>
-      <view class="button-group">
-        <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
-        <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
-      </view>
+    <view class="form-row" wx:if="{{mode==='generation'}}">
+      <text class="form-label">固定辈分</text>
+      <input class="form-input short" placeholder="请输入辈分字" maxlength="1" value="{{generationChar}}" bindinput="onGenerationCharInput" />
     </view>
     <button class="main-btn" bindtap="onGenerate">
       <text class="btn-icon">✏️</text>生成名字
     </button>
   </view>
-</view> 
+</scroll-view>

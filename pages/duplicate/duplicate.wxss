@@ -13,4 +13,174 @@
   background: #f8f8f8;
   border-radius: 8rpx;
   padding: 16rpx;
+}
+
+/* 页面背景 */
+.bg-main {
+  min-height: 100vh;
+  background: #F7FAFF;
+  padding-bottom: 40rpx;
+}
+
+.page-title {
+  font-size: 30rpx;
+  color: #222;
+  font-weight: 600;
+  margin-bottom: 18rpx;
+}
+
+.card {
+  background: #fff;
+  border-radius: 24rpx;
+  box-shadow: 0 4rpx 24rpx rgba(79,140,255,0.08);
+  margin: 40rpx 24rpx 0 24rpx;
+  padding: 32rpx 24rpx;
+}
+
+.form-group {
+  margin-bottom: 24rpx;
+}
+
+.form-group label {
+  font-size: 28rpx;
+  color: #4F8CFF;
+  font-weight: 500;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: 1px solid #e0e6f6;
+  border-radius: 12rpx;
+  padding: 18rpx 20rpx;
+  font-size: 28rpx;
+  color: #4F8CFF;
+  background: #F7FAFF;
+  margin-bottom: 12rpx;
+}
+
+.btn-primary {
+  background: linear-gradient(90deg, #4F8CFF 0%, #6FC3FF 100%);
+  color: #fff;
+  font-size: 30rpx;
+  border-radius: 32rpx;
+  padding: 18rpx 0;
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  box-shadow: 0 2rpx 8rpx rgba(79,140,255,0.18);
+  margin-top: 12rpx;
+}
+
+/* 统计卡片整体样式 */
+.stats-card {
+  margin: 32rpx 16rpx 0 16rpx;
+  border-radius: 24rpx;
+  background: linear-gradient(180deg, #f7faff 60%, #eaf1ff 100%);
+  box-shadow: 0 4rpx 24rpx rgba(79,140,255,0.08);
+  padding: 36rpx 18rpx 32rpx 18rpx;
+  text-align: center;
+  position: relative;
+}
+
+.total-count {
+  width: 120rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+  background: none;
+  color: #4F8CFF;
+  font-size: 56rpx;
+  font-weight: 600;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto 10rpx auto;
+  letter-spacing: 2rpx;
+}
+
+.same-tip {
+  color: #888;
+  font-size: 24rpx;
+  margin-bottom: 30rpx;
+}
+
+.gender-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48rpx;
+  margin-top: 18rpx;
+}
+.gender-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: none;
+}
+.gender-icon {
+  width: 56rpx;
+  height: 56rpx;
+  background: #e6edff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+  color: #4F8CFF;
+}
+.gender-stat.female .gender-icon {
+  background: #ffe6f2;
+  color: #FF69B4;
+}
+.gender-label {
+  color: #888;
+  font-size: 24rpx;
+  margin-bottom: 4rpx;
+}
+.gender-count {
+  color: #222;
+  font-size: 32rpx;
+  font-weight: 500;
+  margin-top: 2rpx;
+}
+
+/* 柱状分布图模拟 */
+.bar-chart {
+  margin-top: 15rpx;
+  height: 150rpx;
+  background: #f0f5ff;
+  border-radius: 12rpx;
+  display: flex;
+  align-items: flex-end;
+  padding: 10rpx;
+}
+.bar {
+  flex: 1;
+  text-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.bar-inner {
+  width: 80%;
+  margin: 0 auto;
+  border-radius: 8rpx 8rpx 0 0;
+  position: relative;
+}
+.bar-label {
+  position: absolute;
+  bottom: -25rpx;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 22rpx;
+  color: #888;
+}
+
+.loading {
+  text-align: center;
+  color: #4F8CFF;
+  font-size: 28rpx;
+  margin-top: 40rpx;
 } 
