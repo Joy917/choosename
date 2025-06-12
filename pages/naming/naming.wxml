@@ -41,7 +41,8 @@
     <view class="form-row">
       <text class="form-label">名字长度</text>
       <view class="button-group">
-        <button class="form-btn {{wordCount==2?'active':''}}" data-count="2" bindtap="onCountSelect">单字</button>
+        <button class="form-btn {{wordCount==2?'active':''}}" data-count="2"
+         bindtap="onCountSelect">单字</button>
         <button class="form-btn {{wordCount==3?'active':''}}" data-count="3" bindtap="onCountSelect">双字</button>
       </view>
     </view>
